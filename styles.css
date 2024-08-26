@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+
+:root {
+  /*  (main background)*/
+  --very-darkblue: hsl(233, 47%, 7%);
+  /* (card background) */
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  /* (accent) */
+  --soft-violet: hsl(277, 64%, 61%);
+  /*  (main heading, stats)*/
+  --white: hsl(0, 0%, 100%);
+  /* (main paragraph) */
+  --slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* (stat headings) */
+  --slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--very-darkblue);
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  text-align: center;
+}
+h1 {
+  font-family: "Inter", sans-serif;
+  color: var(--white);
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+p {
+  color: var(--slightly-transparent-white);
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  line-height: 1.8;
+}
+.highlight {
+  color: var(--soft-violet);
+}
+.card-container {
+  background-color: var(--dark-desaturated-blue);
+  border-radius: 0.5rem;
+  width: 325px;
+  overflow: hidden;
+}
+.hero-image {
+  background-image: url(images/image-header-mobile.jpg);
+  background-color: var(--soft-violet);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 240px;
+}
+
+.info-container {
+  padding: 2rem;
+}
+.stats {
+  margin-top: 3rem;
+}
+.stat-details {
+  margin-top: 1rem;
+}
+.stat-number {
+  font-family: "Inter", sans-serif;
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.stat-text {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+@media screen and (min-width: 768px) {
+  .card-container {
+    width: 80%;
+
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .hero-image {
+    background-image: url(images/image-header-desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: auto;
+
+    flex: 2;
+  }
+  .info-container {
+    flex: 1;
+
+    margin: 4rem 6rem 4rem 4rem;
+    text-align: left;
+  }
+  .stats {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+  }
+  .info {
+    width: 350px;
+  }
+}
